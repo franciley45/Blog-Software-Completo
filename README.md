@@ -1,6 +1,6 @@
 # Projeto-Pessoal-Back-End
 
-Olá esse é um projeto pessoal feito do zero por mim é simples mas totalmente funcional, o projeto de programação funcional que mostrasse um pouco dos conhecimento adquiridos em Back-End  na Trybe Tecnologias utilizada JavaScript, NodeJS, API Rest, MYSQL, Express, Mocha, Chai,  Sinon, JsonWebToken, Arquitetura MSC, Docker é Docker-Compose. Se trata de blog só com o back-end tem um banco de dados que se chama Espirito Santo que possui duas tabelas user é posts,  o projeto está 100% coberto por teste unitário é com CRUD completo.
+Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o projeto mostrasse um pouco dos conhecimento adquiridos em Back-End na Trybe Tecnologias utilizada JavaScript, NodeJS, API Rest, MYSQL, Express, Mocha, Chai,  Sinon, JsonWebToken, Arquitetura MSC, Docker é Docker-Compose. Se trata de blog só com o back-end tem um banco de dados que se chama Espirito Santo que possui duas tabelas user é posts, o projeto está 100% coberto por teste unitário é com CRUD completo.
 <details>
 
 ---
