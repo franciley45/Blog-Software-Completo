@@ -15,4 +15,7 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
 2.  Entre no conteiner de imagem Node é instale as dependências 
     * `docker exec -it nome-do-conteiner bash`
     * `npm install` 
+    * `npm start` ou `npm run dev`
+3.  Comando test de cobertura mocha
+    * `npm run test:mocha`
 
