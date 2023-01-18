@@ -20,10 +20,7 @@ DROP DATABASE IF EXISTS EspiritoSanto;
   
   INSERT INTO EspiritoSanto.user (name, email, password)
   VALUES
-    ('user1', 'user1@gmail.com', '123'),
-    ('user2', 'user2@gmail.com', '123'),
-    ('user3', 'user3@gmail.com', '123'),
-    ('user4', 'user4@gmail.com', '123');
+    ('user1', 'user1@gmail.com', '123');
     
     INSERT INTO EspiritoSanto.posts (title, user_id, date, milagres)
   VALUES
