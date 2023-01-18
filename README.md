@@ -16,6 +16,22 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
     * `docker exec -it nome-do-conteiner bash`
     * `npm install` 
     * `npm start` ou `npm run dev`
+
 3.  Comando test de cobertura mocha
     * `npm run test:mocha`
+
+4.  Corpo da requisição usuario, POST rota http://localhost:3000/user/
+    * `{
+       "name": "user1",
+       "email": "user15@gmail.com",
+       "password": "123"
+       }`
+       
+5.  Corpo da requisição post, POST ou PUT rota http://localhost:3000/milagres/
+    * `{
+       "name": "deus",
+       "email": "deus@gmail.com",
+       "date": "2022-12-21T19:02:55.000Z",
+       "miracle": "salvação é perdão"
+      }`
 
