@@ -17,17 +17,20 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
     * `npm install` 
     * `npm start` ou `npm run dev`
 
-3.  Comando test de cobertura mocha
+3.  Criar o banco de dados usando mysql workbench para isso o arquivo
+    * `migration.sql`
+
+4.  Comando test de cobertura mocha
     * `npm run test:mocha`
 
-4.  Corpo da requisição usuario, POST rota http://localhost:3000/user/
+5.  Corpo da requisição usuario, POST rota http://localhost:3000/user/
     * `{
        "name": "user1",
        "email": "user15@gmail.com",
        "password": "123"
        }`
 
-5.  Corpo da requisição post, POST ou PUT rota http://localhost:3000/milagres/
+6.  Corpo da requisição post, POST ou PUT rota http://localhost:3000/milagres/
     * `{
        "name": "deus",
        "email": "deus@gmail.com",
@@ -35,7 +38,7 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
        "miracle": "salvação é perdão"
       }`
       
-5.  Corpo da requisição login, POST rota http://localhost:3000/login/
+7.  Corpo da requisição login, POST rota http://localhost:3000/login/
     * `{
        "email": "user1@gmail.com",
        "password": "123"
