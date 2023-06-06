@@ -34,12 +34,11 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
        }`
 
 6.  Corpo da requisição post, POST ou PUT rota http://localhost:3000/milagres/
-    * `{
-       "name": "deus",
-       "email": "deus@gmail.com",
+    * `{ 
+       "title": "deus",
        "date": "2022-12-21T19:02:55.000Z",
-       "miracle": "salvação é perdão"
-      }`
+       "milagres": "salvação é perdão"
+       }`
       
 7.  Corpo da requisição login, POST rota http://localhost:3000/login/
     * `{
