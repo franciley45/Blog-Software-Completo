@@ -17,7 +17,10 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
     * `npm install` 
     * `npm start` ou `npm run dev`
 
-3.  Criar o banco de dados usando mysql workbench para isso o arquivo
+3.  Crie o banco de dados utilizando o MySQL Workbench. Depois de fazer o login, copie o migration.sql e execute-o dentro do MySQL Workbench.
+    * `Username: root`
+    * `Password: password`
+    * `Port: 3306`
     * `migration.sql`
 
 4.  Comando test de cobertura mocha
