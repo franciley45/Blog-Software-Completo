@@ -1,5 +1,4 @@
 import './App.css'
-import { useState } from 'react'
 import {
   BrowserRouter as Router,
   Route,
@@ -12,16 +11,6 @@ import { AuthProvider } from './Contexts/auth'
 
 
 function App() {
-  const [user, setUser] = useState(null)
-
-  const login = (email, password) => {
-    console.log('login', { email, password })
-    setUser({ id: '123', email })
-  }
-  const logout = () => {
-    console.log("logout")
-  }
-
   return (
     <>
       <Router>
