@@ -10,7 +10,7 @@ function App() {
     <>
       <h1>APP</h1>
       <Login/>
-      <Home/>
+      {/* <Home/> */}
       
     </>
   )
