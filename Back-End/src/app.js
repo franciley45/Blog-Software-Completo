@@ -1,7 +1,5 @@
 // src/app.js
-var cors = require('cors')
-
-
+const cors = require('cors')
 const express = require('express');
 
 const loginRouter = require('./routes/loginRoute');
