@@ -6,15 +6,7 @@ export const api = axios.create({
 })
 
 export const getAllDate = async () => {
-  api.get('/milagres')
-    .then(function (response) {
-      // aqui acessamos o corpo da resposta:
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      // aqui temos acesso ao erro, quando alguma coisa inesperada acontece:
-      console.log(error);
-    })
+ return await api.get('/milagres');
 }
 
 export const loginApi = async (email, password) => {

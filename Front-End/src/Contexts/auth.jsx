@@ -12,6 +12,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         const response = await loginApi(email, password);
+        console.log(response)
         if (response.status == 200) {
             setUser(response.data.name);
             const token = response.data.token;
@@ -22,7 +23,7 @@ export const AuthProvider = ({ children }) => {
             api.defaults.headers.Authorization = `Bearer ${token}`;
             navigate('/');
         } else {
-            alert("email ou password errado");
+            alert(response.message);
         }
     };
 
