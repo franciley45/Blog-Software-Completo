@@ -1,29 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useContext } from 'react'
+import { AuthContext } from '../Contexts/auth'
+
 function Home() {
-  const navigate = useNavigate();
-  const [user, setUser] = useState(null)
+  const { authenticated, setUser, logout, clickLogin } = useContext(AuthContext);
   useEffect(() => {
-    const result = localStorage.getItem("user")
-    setUser(result)
-  })
-  const handleClick = () => {
-    navigate('/login')
-  }
-  const handleClick2 = () => {
-    localStorage.removeItem("user")
-    setUser(null)
-  }
+    const storage = localStorage.getItem("user");
+    setUser(storage);
+  },[])
+
   return (
     <>
-    <div>Home</div>
-   
-    {user ? <button type='button' onClick={handleClick2}>Sair</button> : 
-     <button type='button' onClick={handleClick}>Login</button>
-    }
-    
+      <div>Home</div>
+      {authenticated ? <button type='button' onClick={logout}>Sair</button> :
+        <button type='button' onClick={clickLogin}>Login</button>
+      }
     </>
-    
   )
 }
 

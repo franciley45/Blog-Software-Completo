@@ -9,21 +9,24 @@ export const AuthProvider = ({ children }) => {
 
     const login = (email, password) => {
         const loggedUser = { id: "123", email };
-
         localStorage.setItem("user", JSON.stringify(loggedUser))
 
         if (password === "secret") {
             setUser(loggedUser);
             navigate('/');
         }
-
     };
+
     const logout = () => {
-        console.log("logout");
         localStorage.removeItem("user");
         setUser(null);
     };
+
+    const clickLogin = () => {
+        navigate('/login')
+    }
+
     return (
-        <AuthContext.Provider value={{ authenticated: !!user, user, login, logout }}>{children}</AuthContext.Provider>
+        <AuthContext.Provider value={{ authenticated: !!user, user, login, logout, setUser, clickLogin }}>{children}</AuthContext.Provider>
     )
 };

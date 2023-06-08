@@ -7,7 +7,7 @@ const states = {
 }
 function Login() {
     const [state, setState] = useState(states)
-    const { authenticated, login } = useContext(AuthContext)
+    const { login } = useContext(AuthContext)
     
     const onChange = ({target}) =>{
      const { name, value } = target
@@ -18,13 +18,11 @@ function Login() {
     }
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log("Submit",state)
         login(state.email, state.password)
     }
   return (
     <>
      <div>Login</div>
-     <p>{String(authenticated)}</p>
      <form onSubmit={handleSubmit}>
         <section>
             <label htmlFor="email">Email</label>
