@@ -21,6 +21,22 @@ function Home() {
     const result = `../../src/Imagens/b${random}.jpg`
     return result
   }
+
+  const portId = ({ target }) => {
+    const { id } = target;
+    console.log(`post${id}`)
+    const port = document.getElementById(`post${id}`)
+    const btn = document.getElementById(id)
+    console.log(btn)
+    if (port.style.display == "flex") {
+      port.style.display = "-webkit-box";
+      btn.innerHTML = "Leia Mais"
+    } else {
+      port.style.display = "flex";
+      btn.innerHTML = "Leia Menos"
+    }
+  }
+
   return (
     <>
 
@@ -29,13 +45,14 @@ function Home() {
           <h3>TESTEMUNHOS DE FÉ – BLOG</h3>
         </div>
         <div>
-            {authenticated ? <button type='button'className='btn' onClick={logout}>Sair</button> :
-              <button type='button' className='btn' onClick={clickLogin}>Login</button>
-            }
-          </div>
+          {authenticated ? <button type='button' className='btn' onClick={logout}>Sair</button> :
+            <button type='button' className='btn' onClick={clickLogin}>Login</button>
+          }
+        </div>
       </div>
       {posts.map((post) =>
         <section id="blog" key={post.posts_id}>
+
           <div class="blog-box-container">
 
             <div class="blog-box">
@@ -49,7 +66,8 @@ function Home() {
               <div class="blog-box-text">
                 <strong>Artificial Intelligence</strong>
                 <a href="#">{post.title}</a>
-                <p>{post.milagres}</p>
+                <p id={`post${post.posts_id}`}>{post.milagres}</p>
+                <button id={post.posts_id} onClick={portId}>Leia Mais</button>
                 <div class="blog-author">
                   <div class="blog-author-img">
                     <img src={getRandomInt()} alt="" />
