@@ -39,7 +39,7 @@ function Home() {
 
   return (
     <>
-
+<div>
       <div id="blog">
         <div class="blog-heading">
           <h3>TESTEMUNHOS DE FÉ – BLOG</h3>
@@ -82,6 +82,8 @@ function Home() {
           </div>
         </section>
       )}
+      <button className='button'>+</button>
+      </div>
     </>
   )
 }
