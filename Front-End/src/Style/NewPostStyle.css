@@ -1,36 +1,47 @@
+
 .conteiner {
-    margin-top: 10px;
+    cursor: pointer;
+    position: fixed;
+    margin-top: 630px;
     align-items: center;
-    width: 600px;
-    height: 710px;
+    width: 500px;
+    height: 690px;
     border: 1px solid cornflowerblue;
     border-radius: 10px;
+    z-index: 1000;
 }
-h1 {
+
+.h1 {
     display: flex;
     justify-content: center;
 }
-section {
+
+.section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form div {
+form .div {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
-form input, form textarea {
+
+form .input,
+form .textarea {
     outline: unset;
     padding: 20px;
     width: 450px;
     border: 1px solid cornflowerblue;
     border-radius: 20px;
 }
-form input:focus, form textarea:focus {
- background-color: rgb(250, 246, 246);
+
+form .input:focus,
+form .textarea:focus {
+    background-color: rgb(250, 246, 246);
 }
+
 .enviar {
     margin-top: 10px;
     background-color: cornflowerblue;

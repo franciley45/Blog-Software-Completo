@@ -13,7 +13,6 @@ ul {
     list-style: none;
 }
 
-/*==header========================*/
 .header {
     display: flex;
     justify-content: space-around;
@@ -75,7 +74,7 @@ ul {
     position: fixed;
     right: 15px;
     bottom: 15px;
-    background-color: #00DDEB;
+    background-color:#57e4ee;
     width: 50px;
     height: 50px;
     border: 1px solid silver;
@@ -170,6 +169,7 @@ ul {
     flex-direction: column;
     padding: 30px 10px 20px 10px;
     height: 100%;
+    /* filter: blur(3px); */ /* aquiiiii */
 }
 
 .blog-box-text strong,

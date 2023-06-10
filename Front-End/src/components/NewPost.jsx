@@ -11,12 +11,13 @@ function NewPost() {
     }
     return (
         <div className='conteiner'>
-            <h1>Formulário de postagem</h1>
+            <h1 className='h1'>Formulário de postagem</h1>
             <form onSubmit={handleSubmit}>
-                <section>
-                    <div>
+                <section className='section'>
+                    <div className='div'>
                         <label htmlFor="name">Name</label>
                         <input
+                            className='input'
                             placeholder='digite o seu nome'
                             type="name"
                             name="name"
@@ -25,11 +26,12 @@ function NewPost() {
                         ></input>
                     </div>
                 </section>
-                <section>
-                    <div>
+                <section className='section'>
+                    <div className='div'>
                         <label htmlFor="title">Title</label>
                         <input
-                            placeholder='digite o titulo do seu poste'
+                            className='input'
+                            placeholder='digite o titulo da sua postagem'
                             type="title"
                             name="title"
                             value={state.title}
@@ -37,10 +39,11 @@ function NewPost() {
                         ></input>
                     </div>
                 </section>
-                <section>
-                    <div>
+                <section className='section'>
+                    <div className='div'>
                         <label htmlFor="post">Post</label>
                         <textarea
+                            className='textarea'
                             rows="15"
                             type="post"
                             name="post"
@@ -48,8 +51,8 @@ function NewPost() {
                             onChange={onChange}
                         ></textarea>
                     </div>
-                </section>
-                <section>
+                </section >
+                <section className='section'>
                     <button className='enviar' type='submit'>Enviar</button>
                 </section>
             </form>
