@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 import "../Style/NewPostStyle.css"
 
+const states = {
+    name: "",
+    title: "",
+    post: "",
+}
 function NewPost() {
-    const [state, setState] = useState('')
-    const handleSubmit = () => {
-
+    const [state, setState] = useState(states)
+    console.log(state)
+    const onChange = ({ target }) => {
+        const { name, value } = target
+        setState((prevState) => ({
+            ...prevState,
+            [name]: value
+        }))
     }
-    const onChange = () => {
+    const handleSubmit = () => {
 
     }
     return (
