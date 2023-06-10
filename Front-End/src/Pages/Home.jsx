@@ -104,7 +104,7 @@ function Home() {
                       <img src={getRandomInt()} alt="" />
                     </div>
                     <div className="blog-author-text">
-                      <strong>Alax</strong>
+                      <strong>{post.name}</strong>
                       <span>{post.date}</span>
                     </div>
                   </div>
