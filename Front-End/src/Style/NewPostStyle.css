@@ -1,4 +1,3 @@
-
 .conteiner {
     cursor: pointer;
     position: fixed;
@@ -51,4 +50,26 @@ form .textarea:focus {
     cursor: pointer;
     border-radius: 20px;
     border: 1px solid cornflowerblue;
+}
+
+@media(max-width:600px) {
+    .conteiner {
+        width: 400px;
+        height: 665px;
+        font-size: 10px;
+    }
+
+    form .input,
+    form .textarea {
+        width: 350px;
+
+    }
+
+    .enviar {
+        width: 350px;
+    }
+
+    .div {
+        font-size: 15px;
+    }
 }
