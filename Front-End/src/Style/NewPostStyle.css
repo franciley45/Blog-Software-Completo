@@ -54,19 +54,18 @@ form .textarea:focus {
 
 @media(max-width:600px) {
     .conteiner {
-        width: 400px;
-        height: 665px;
+        width: 350px;
+        height: 670px;
         font-size: 10px;
     }
 
     form .input,
     form .textarea {
-        width: 350px;
-
+        width: 280px;
     }
 
     .enviar {
-        width: 350px;
+        width: 280px;
     }
 
     .div {
