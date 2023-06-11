@@ -4,8 +4,8 @@
     margin-top: 630px;
     align-items: center;
     width: 500px;
-    height: 690px;
-    border: 1px solid cornflowerblue;
+    height: 695px;
+    border: 4px solid #778899;
     border-radius: 10px;
     z-index: 1000;
 }
@@ -32,7 +32,7 @@ form .textarea {
     outline: unset;
     padding: 20px;
     width: 450px;
-    border: 1px solid cornflowerblue;
+    border: 3px solid #778899;
     border-radius: 20px;
 }
 
@@ -43,19 +43,21 @@ form .textarea:focus {
 
 .enviar {
     margin-top: 10px;
-    background-color: cornflowerblue;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    color: #FFFFFF;
     width: 450px;
     height: 50px;
     color: white;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid cornflowerblue;
+    border: 1px solid rgb(100, 121, 237);
 }
 
 @media(max-width:600px) {
     .conteiner {
         width: 350px;
-        height: 670px;
+        height: 685px;
         font-size: 10px;
     }
 
