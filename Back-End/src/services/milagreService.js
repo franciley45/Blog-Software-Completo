@@ -1,6 +1,7 @@
 const milagresModel = require('../models/milagreModel')
 
 
+
 const getAll = async () => {
   const result = await milagresModel.getAll()
   return result
