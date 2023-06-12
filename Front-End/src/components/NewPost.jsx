@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import { postApi } from '../Services/Api';
 import "../Style/NewPostStyle.css"
 
 const states = {
-    name: "",
     title: "",
     post: "",
 }
+
 function NewPost() {
     const [state, setState] = useState(states)
     console.log(state)
@@ -16,26 +17,26 @@ function NewPost() {
             [name]: value
         }))
     }
-    const handleSubmit = () => {
+    const formataDate = () => {
+        const timeElapsed = Date.now();
+        const today = new Date(timeElapsed);
+        const formatoIsoDate = today.toISOString();
+        return formatoIsoDate;
+    }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const token = JSON.parse(localStorage.getItem("token"))
+        const result = await postApi(state.title, formataDate(), state.post, token)
+        if (result.status == 201) {
+            console.log('deus toma conta de tudo')
+            window.location.reload(true);
+        }
     }
     return (
         <div className='conteiner'>
             <h1 className='h1'>Formulário de postagem</h1>
             <form onSubmit={handleSubmit}>
-                <section className='section'>
-                    <div className='div'>
-                        <label htmlFor="name">Name</label>
-                        <input
-                            className='input'
-                            placeholder='digite o seu nome'
-                            type="name"
-                            name="name"
-                            value={state.name}
-                            onChange={onChange}
-                        ></input>
-                    </div>
-                </section>
                 <section className='section'>
                     <div className='div'>
                         <label htmlFor="title">Title</label>

@@ -1,13 +1,14 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { AuthContext } from '../Contexts/auth';
+import { PostsContext } from '../Contexts/Posts';
 import { getAllDate } from '../Services/Api';
 import "../Style/HomeStyle.css";
 import NewPost from '../components/NewPost';
 
 function Home() {
-  const [posts, setPosts] = useState([]);
-  const [validUser, setvalidUser] = useState(false);
+  const { posts, setPosts } = useContext(PostsContext);
   const { authenticated, setUser, logout, clickLogin } = useContext(AuthContext);
+  const [validUser, setvalidUser] = useState(false);
 
   useEffect(() => {
     const storage = localStorage.getItem("user");
@@ -97,7 +98,9 @@ function Home() {
                       <strong id='blur'>Busquem, pois, em primeiro lugar o Reino de Deus e a sua justiça, e todas essas coisas lhes serão acrescentadas.
                         - Mateus 6:33</strong>
                       <a href="#">{post.title}</a>
+                      <div id='display'>
                       <p id={`post${post.posts_id}`}>{post.milagres}</p>
+                      </div>
                       <button id={post.posts_id} onClick={portId}>Leia Mais</button>
                       <div className="blog-author">
                         <div className="blog-author-img">
@@ -105,7 +108,7 @@ function Home() {
                         </div>
                         <div className="blog-author-text">
                           <strong>{post.name}</strong>
-                          <span>{post.date}</span>
+                          <span>{new Date(post.date).toDateString()}</span>
                         </div>
                       </div>
                     </div>
