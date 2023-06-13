@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { AuthContext } from '../Contexts/auth'
 import "../Style/LoginStyle.css"
+import Particle from '../components/Particle'
 
 const states = {
     email: "",
@@ -23,6 +24,7 @@ function Login() {
     }
     return (
         <>
+        <Particle/>
             <div className='box'>
                 <h2>Login</h2>
                 <form action='' onSubmit={handleSubmit}>
