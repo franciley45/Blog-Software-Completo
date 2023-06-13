@@ -2,9 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url('../../src/Imagens/b11.jpeg');
-    background-size:100%;
 }
+
 .box {
     position: absolute;
     top: 50%;
@@ -17,17 +16,19 @@ body {
     box-shadow: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
+
 .box h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #FFFFFF;
     text-align: center;
 }
+
 .box .inputBox {
     position: relative;
 }
 
-.box .inputBox  input{
+.box .inputBox input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -39,23 +40,26 @@ body {
     outline: none;
     background-color: transparent;
 }
-.box .inputBox label{
-position: absolute;
-top: 0;
-left: 0;
-padding: 10px 0;
-font-size: 16px;
-color: #FFFFFF;
-pointer-events: none;
-transition: .5s;
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    pointer-events: none;
+    transition: .5s;
 }
-.box .inputBox  input:focus ~ label,
-.box .inputBox  input:valid ~ label {
-   top: -18px;
-   left: 0;
-   color: #03a9f4;
-   font-size: 12px;
+
+.box .inputBox input:focus~label,
+.box .inputBox input:valid~label {
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
 }
+
 .box input[type="submit"] {
     margin-left: 40%;
     background-color: transparent;
@@ -66,4 +70,14 @@ transition: .5s;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.register-link {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-link  p {
+  color: #FFFFFF;
 }

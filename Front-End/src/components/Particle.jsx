@@ -69,12 +69,12 @@ import { loadFull } from "tsparticles";
                     default: "bounce",
                 },
                 random: false,
-                speed: 2,
+                speed: 3,
                 straight: false,
             },
             number: {
                 density: {
-                    enable: true,
+                    enable: false,
                     area: 800,
                 },
                 value: 80,
