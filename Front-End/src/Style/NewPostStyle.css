@@ -1,10 +1,10 @@
 .conteiner {
     cursor: pointer;
     position: fixed;
-    margin-top: 630px;
+    margin-top: 610px;
     align-items: center;
-    width: 500px;
-    height: 610px;
+    width: 450px;
+    height: 600px;
     border: 4px solid #397fc5;
     border-radius: 10px;
     z-index: 1000;
@@ -31,7 +31,7 @@ form .input,
 form .textarea {
     outline: unset;
     padding: 20px;
-    width: 450px;
+    width: 400px;
     border: 3px solid #397fc5;
     border-radius: 20px;
 }
@@ -46,7 +46,7 @@ form .textarea:focus {
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     color: #FFFFFF;
-    width: 450px;
+    width: 400px;
     height: 50px;
     color: white;
     cursor: pointer;
