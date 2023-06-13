@@ -1,6 +1,4 @@
 import React, { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { loginApi, api } from "../Services/Api";
 
 export const PostsContext = createContext();
 
