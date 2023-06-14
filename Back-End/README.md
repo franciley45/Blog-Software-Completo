@@ -8,7 +8,7 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
   <summary><strong>👨‍💻 Clone o repositório</strong></summary><br />
 
 1. Clone o repositório
-  * `git clone git@github.com:franciley45/Projeto-Pessoal-Back-End.git`.
+  * `git@github.com:franciley45/Blog-Software-Completo.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd Projeto-pessoal-Back-End`
     * `docker-compose up -d`
