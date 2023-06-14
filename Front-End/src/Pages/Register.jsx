@@ -43,7 +43,7 @@ function Register() {
                     </div>
                     <div className='inputBox'>
                         <input
-                            type='text'
+                            type="email"
                             autoComplete='off'
                             autoFocus=''
                             name="email"
