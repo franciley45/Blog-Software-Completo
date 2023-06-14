@@ -68,13 +68,13 @@ import { loadFull } from "tsparticles";
                 outModes: {
                     default: "bounce",
                 },
-                random: false,
-                speed: 3,
-                straight: false,
+                random: true,
+                speed: 4,
+                straight: true,
             },
             number: {
                 density: {
-                    enable: false,
+                    enable: true,
                     area: 800,
                 },
                 value: 80,

@@ -49,11 +49,11 @@ function Login() {
                             value={state.password}
                             onChange={onChange}
                             required></input>
-                        <label for="">Senha</label>
+                        <label for="">Password</label>
                     </div>
                     <input type='submit' value='Entrar'></input>
                     <div className='register-link'>
-                        <p>Don't have an accout? <a href='#'>Register</a></p>
+                        <p>Don't have an accout? <a href='/register'>Register</a></p>
                     </div>
                 </form>
             </div>

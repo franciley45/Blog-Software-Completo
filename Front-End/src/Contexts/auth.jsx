@@ -12,7 +12,6 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         const response = await loginApi(email, password);
-        console.log(response)
         if (response.status == 200) {
             setUser(response.data.name);
             const token = response.data.token;
@@ -26,6 +25,10 @@ export const AuthProvider = ({ children }) => {
             alert(response.message);
         }
     };
+    const Register = async (name, email, password) => {
+    
+    };
+
 
     const logout = () => {
         localStorage.removeItem("user");
