@@ -19,11 +19,11 @@ Docker: https://www.docker.com
 Para iniciar o projeto, siga as instruções nas pastas correspondentes:             
 
  # Back-end
-1- Navegue até a pasta "Back-end" no diretório raiz do projeto.
+1- Navegue até a pasta "Back-end" no diretório raiz do projeto.<br />
 2- Leia o arquivo README.md na pasta "Back-end" para obter informações detalhadas sobre as etapas de configuração e execução do backend.
 
 # Front-end
-1-Navegue até a pasta "Front-end" no diretório raiz do projeto.
+1-Navegue até a pasta "Front-end" no diretório raiz do projeto.<br />
 2- Leia o arquivo README.md na pasta "Front-end" para obter informações detalhadas sobre as etapas de configuração e execução do frontend.
 
 
