@@ -1,4 +1,3 @@
-Boas vindas ao repositório do meu Projeto-Pessoal
 
 # Bem-vindo ao Blog Software Completo com Banco de Dados MySQL!
 Este é um projeto incrível que combina um banco de dados MySQL, um backend em Node.js com o uso de contêiner Docker, e um frontend React+Vite. Aqui você encontrará todas as informações necessárias para entender e utilizar esse software completo. Vamos lá!
@@ -17,7 +16,7 @@ Node.js: https://nodejs.org
 Docker: https://www.docker.com
 
 # Como Iniciar o Projeto
-Para iniciar o projeto, siga as instruções nas pastas correspondentes:
+Para iniciar o projeto, siga as instruções nas pastas correspondentes:             
 
  # Back-end
 1- Navegue até a pasta "Back-end" no diretório raiz do projeto.
@@ -28,6 +27,6 @@ Para iniciar o projeto, siga as instruções nas pastas correspondentes:
 2- Leia o arquivo README.md na pasta "Front-end" para obter informações detalhadas sobre as etapas de configuração e execução do frontend.
 
 
-Certifique-se de ler cuidadosamente os arquivos README.md em cada pasta correspondente para configurar corretamente tanto o backend quanto o frontend do projeto.
+Certifique-se de ler cuidadosamente os arquivos README.md em cada pasta correspondente para configurar corretamente tanto o backend quanto o frontend doprojeto.
 
 Espero que você aproveite o uso deste software completo! Se tiver alguma dúvida ou precisar de ajuda, não hesite em entrar em contato.
