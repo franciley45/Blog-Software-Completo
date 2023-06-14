@@ -2,7 +2,7 @@
 
 Olá esse projeto
 Foi pensado para demostrar um pouco dos conhecimentos adquiridos no curso da trybe no modulo de Front-End,
-foi usando: JavaScript, React+Vite, Hooks, React Router, Test Jest, CSS, Json Web Token Componentização, Requisição de API, Lógica de Programação é Armazenamento na localStorage.
+foi usando: JavaScript, React+Vite, Hooks, React Router, Test Jest, CSS, Json Web Token, Componentização, Requisição de API, Lógica de Programação é Armazenamento na localStorage.
 <details>
 
 ---
