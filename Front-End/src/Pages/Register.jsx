@@ -10,8 +10,8 @@ const states = {
 }
 function Register() {
     const [state, setState] = useState(states)
-    const { login } = useContext(AuthContext)
-console.log(state)
+    const { Register } = useContext(AuthContext)
+
     const onChange = ({ target }) => {
         const { name, value } = target
         setState((prevState) => ({
@@ -21,7 +21,7 @@ console.log(state)
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        login(state.email, state.password)
+        Register(state.name, state.email, state.password)
     }
     return (
         <>
