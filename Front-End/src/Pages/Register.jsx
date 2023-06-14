@@ -5,11 +5,12 @@ import Particle from '../components/Particle'
 
 const states = {
     email: "",
-    password: ""
+    password: "",
+    name: "",
 }
-function Login() {
+function Register() {
     const [state, setState] = useState(states)
-    const { login } = useContext(AuthContext)
+    const { Register } = useContext(AuthContext)
 
     const onChange = ({ target }) => {
         const { name, value } = target
@@ -20,17 +21,29 @@ function Login() {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        login(state.email, state.password)
+        Register(state.name, state.email, state.password)
     }
     return (
         <>
         <Particle/>
             <div className='box'>
-                <h2>Login</h2>
+                <h2>Register</h2>
                 <form action='' onSubmit={handleSubmit}>
-                    <div className='inputBox'>
+                <div className='inputBox'>
                         <input
                             type='text'
+                            autoComplete='off'
+                            autoFocus=''
+                            name="name"
+                            spellcheck="false"
+                            value={state.name}
+                            onChange={onChange}
+                            required></input>
+                        <label for="">Name</label>
+                    </div>
+                    <div className='inputBox'>
+                        <input
+                            type="email"
                             autoComplete='off'
                             autoFocus=''
                             name="email"
@@ -51,10 +64,7 @@ function Login() {
                             required></input>
                         <label for="">Password</label>
                     </div>
-                    <input type='submit' value='Entrar'></input>
-                    <div className='register-link'>
-                        <p>Don't have an accout? <a href='/register'>Register</a></p>
-                    </div>
+                    <input type='submit' value='Register'></input>
                 </form>
             </div>
         </>
@@ -62,4 +72,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default Register;

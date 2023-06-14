@@ -20,7 +20,7 @@ function Home() {
   }, []);
 
   function getRandomInt() {
-    const random = String(Math.floor(Math.random() * (6 - 1) + 1));
+    const random = String(Math.floor(Math.random() * (5 - 1) + 1));
     const result = `../../src/Imagens/b${random}.jpg`;
     return result;
   }

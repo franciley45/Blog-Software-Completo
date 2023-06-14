@@ -31,7 +31,7 @@ const createUser = async (name, email, password) => {
   const payload = { data: { email, user_id: result, name }};
   const token = jwt.sign(payload, secret, jwtConfig);
 
-return { status: null, message: token };
+return { status: null, message: { name, user_id: result, token }};
 };
 
 module.exports = {

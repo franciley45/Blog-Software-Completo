@@ -21,7 +21,7 @@ const createUser = async (req,res) => {
   const { status, message } = await userServices.createUser(name, email, password)
 
   if (status === 409) return res.status(status).json({ message })
-  return res.status(201).json({ token: message })
+  return res.status(201).json( message )
 }
 
 module.exports = {
