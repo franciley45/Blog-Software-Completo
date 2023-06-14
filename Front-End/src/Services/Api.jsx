@@ -1,7 +1,11 @@
 import axios from "axios";
 
+
+const HOST = import.meta.env.VITE_REACT_API_URL || "http://localhost:3000";
+
+
 export const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: `${HOST}`,
 })
 
 export const getAllDate = async () => {
