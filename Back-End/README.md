@@ -10,7 +10,7 @@ Olá esse é um projeto pessoal feito do zero por mim totalmente funcional, o pr
 1. Clone o repositório
   * `git@github.com:franciley45/Blog-Software-Completo.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd Projeto-pessoal-Back-End`
+    * `cd Back-End`
     * `docker-compose up -d`
 2.  Entre no conteiner de imagem Node é instale as dependências 
     * `docker exec -it nome-do-conteiner bash`
