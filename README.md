@@ -29,4 +29,4 @@ Para iniciar o projeto, siga as instruções nas pastas correspondentes:
 
 Certifique-se de ler cuidadosamente os arquivos README.md em cada pasta correspondente para configurar corretamente tanto o backend quanto o frontend doprojeto.
 
-Espero que você aproveite o uso deste software completo! Se tiver alguma dúvida ou precisar de ajuda, não hesite em entrar em contato.
+Espero que você aproveite o uso deste software completo! Se tiver alguma dúvida ou precisar de ajuda, não hesite em entrar em contato..
