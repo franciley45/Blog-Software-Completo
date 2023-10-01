@@ -1,7 +1,7 @@
-const connection = require('./db/connection')
+const connect = require("./db/connection")
 
 const login = async (email) => {
-const [[result]] = await connection.execute('SELECT * FROM user WHERE email = ?', [email])
+const [[result]] = await (await connect()).query('SELECT * FROM user WHERE email = ?', [email])
 
 return result
 }

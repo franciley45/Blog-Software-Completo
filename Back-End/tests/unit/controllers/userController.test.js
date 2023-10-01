@@ -69,7 +69,7 @@ describe('user Controller', function () {
     await userController.createUser(req, res);
 
     expect(res.status).to.have.been.calledWith(201);
-    expect(res.json).to.have.been.calledWith({ token });
+    expect(res.json).to.have.been.calledWith(token);
   });
 
   it('testa return createUser User already registered', async function () {
