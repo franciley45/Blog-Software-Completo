@@ -23,7 +23,7 @@ describe('login Controller', function () {
     await loginController.login(req, res);
 
     expect(res.status).to.have.been.calledWith(200);
-    expect(res.json).to.have.been.calledWith({ token });
+    expect(res.json).to.have.been.calledWith(token);
   });
 
   
