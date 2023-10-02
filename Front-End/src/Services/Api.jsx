@@ -1,9 +1,9 @@
 import axios from "axios";
 
 
-/* const HOST = import.meta.env.VITE_REACT_API_URL || "https://blog-software-completo.vercel.app"; */
+const HOST = import.meta.env.VITE_REACT_API_URL;
 
- const HOST ="https://blog-software-completo.vercel.app";
+ /* const HOST ="https://blog-software-completo.vercel.app"; */
 
 
 
