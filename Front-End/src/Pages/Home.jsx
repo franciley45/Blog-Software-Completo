@@ -86,14 +86,14 @@ function Home() {
             {validUser ? <NewPost /> : null}
           </div>
           <div onClick={handleClickBody}>
-            {posts.map((post, index) =>
+            {posts.map((post) =>
               <section id="blog" key={post.posts_id}>
 
                 <div className="blog-box-container">
 
                   <div className="blog-box">
                     <div className="blog-box-img">
-                      <img src={b1} alt="blog" />
+                      <img src={b2}alt="blog" />
                       <a href="#" className="blog-img-link">
                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
