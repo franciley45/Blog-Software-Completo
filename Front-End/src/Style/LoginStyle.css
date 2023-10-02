@@ -81,6 +81,12 @@ body {
 .register-link  p {
   color: #FFFFFF;
 }
+.register-link  a {
+    color: blue;
+  }
+  .register-link a:hover {
+    color: rgb(0, 0, 143);
+  }
 @media only screen and (max-width: 600px) {
     .box {
       width: 300px;

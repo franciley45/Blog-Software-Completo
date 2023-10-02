@@ -55,12 +55,11 @@ function Login() {
                     </div>
                     <input type='submit' value='Entrar'></input>
                     <div className='register-link'>
-                        <p>Don't have an accout? <a onClick={() => navigate('/register')}>Register</a></p>
+                        <p>Don't have an accout? <a href='#' onClick={() => navigate('/register')}>Register</a></p>
                     </div>
                 </form>
             </div>
         </>
-
     )
 }
 
