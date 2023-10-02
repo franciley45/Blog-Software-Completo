@@ -4,6 +4,10 @@ import { PostsContext } from '../Contexts/Posts';
 import { getAllDate } from '../Services/Api';
 import "../Style/HomeStyle.css";
 import NewPost from '../components/NewPost';
+import b0 from '../../src/Imagens/b0.jpg'
+import b1 from '../../src/Imagens/b1.jpg'
+import b2 from '../../src/Imagens/b2.jpg'
+import b3 from '../../src/Imagens/b2.jpg'
 
 function Home() {
   const { posts, setPosts } = useContext(PostsContext);
@@ -19,11 +23,11 @@ function Home() {
     })();
   }, []);
 
-  function getRandomInt() {
+  /* function getRandomInt() {
     const random = String(Math.floor(Math.random() * (5 - 1) + 1));
     const result = `../../src/Imagens/b${random}.jpg`;
     return result;
-  }
+  } */
 
   const portId = ({ target }) => {
     const { id } = target;
@@ -82,14 +86,14 @@ function Home() {
             {validUser ? <NewPost /> : null}
           </div>
           <div onClick={handleClickBody}>
-            {posts.map((post) =>
+            {posts.map((post, index) =>
               <section id="blog" key={post.posts_id}>
 
                 <div className="blog-box-container">
 
                   <div className="blog-box">
                     <div className="blog-box-img">
-                      <img src={getRandomInt()} alt="blog" />
+                      <img src={b1} alt="blog" />
                       <a href="#" className="blog-img-link">
                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
@@ -104,7 +108,7 @@ function Home() {
                       <button id={post.posts_id} onClick={portId}>Leia Mais</button>
                       <div className="blog-author">
                         <div className="blog-author-img">
-                          <img src={getRandomInt()} alt="" />
+                          <img src={b1} alt="" />
                         </div>
                         <div className="blog-author-text">
                           <strong>{post.name}</strong>
