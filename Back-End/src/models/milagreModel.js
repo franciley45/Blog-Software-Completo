@@ -2,8 +2,8 @@ const connect = require("./db/connection")
 const moment = require('moment'); // require
 
 async function getAll() {
-  const sql = `SELECT posts.*, user.name FROM EspiritoSanto.posts
-  INNER JOIN EspiritoSanto.user ON posts.user_id=user.user_id`
+  const sql = `SELECT posts.*, user.name FROM posts
+  INNER JOIN user ON posts.user_id=user.user_id`
 
   const [result] = await (await connect()).query(sql)
   return result
