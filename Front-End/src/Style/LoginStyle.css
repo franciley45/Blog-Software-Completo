@@ -89,4 +89,7 @@ body {
     .box input[type="submit"] {
         margin-left: 30%;
     }
+    .box p {
+        font-size: 13px;
+    }
   }
