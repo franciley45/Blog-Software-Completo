@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../Contexts/auth'
 import "../Style/LoginStyle.css"
 import Particle from '../components/Particle'
@@ -10,6 +11,7 @@ const states = {
 function Login() {
     const [state, setState] = useState(states)
     const { login } = useContext(AuthContext)
+    const navigate = useNavigate();
 
     const onChange = ({ target }) => {
         const { name, value } = target
@@ -53,7 +55,7 @@ function Login() {
                     </div>
                     <input type='submit' value='Entrar'></input>
                     <div className='register-link'>
-                        <p>Don't have an accout? <a href='/register'>Register</a></p>
+                        <p>Don't have an accout? <a onClick={() => navigate('/register')}>Register</a></p>
                     </div>
                 </form>
             </div>
