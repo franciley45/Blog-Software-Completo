@@ -1,7 +1,10 @@
 import axios from "axios";
 
 
-const HOST = import.meta.env.VITE_REACT_API_URL || "http://localhost:3000";
+/* const HOST = import.meta.env.VITE_REACT_API_URL || "https://blog-software-completo.vercel.app"; */
+
+ const HOST ="https://blog-software-completo.vercel.app";
+
 
 
 export const api = axios.create({
