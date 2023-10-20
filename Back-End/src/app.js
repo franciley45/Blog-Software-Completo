@@ -1,6 +1,6 @@
 const cors = require('cors')
 const express = require('express');
-const swaggerUi = require('swagger-ui-express');
+const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
 const loginRouter = require('./routes/loginRoute');
@@ -18,15 +18,20 @@ const app = express();
     return options
 } */
 
-var options = {
-    customCssUrl: './style/style.swagger.css'
-  };
 app.use(express.json());
 app.use(cors()) // Use this after the variable declaration
 app.use('/post', milagresRouter)
 app.use('/user', userRouter)
 app.use('/login', loginRouter)
-app.use('/api-docs', swaggerUi.serve);
-app.get('/api-docs', swaggerUi.setup(swaggerDocument));
+
+const options = {
+    explorer: true,
+    swaggerOptions: {
+      docExpansion: 'none'
+    },
+    customCssUrl: 'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css',
+  };
+  
+  app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocument, options));
 
 module.exports = app;
