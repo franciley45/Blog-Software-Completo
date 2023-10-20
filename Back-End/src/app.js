@@ -26,6 +26,6 @@ app.use('/post', milagresRouter)
 app.use('/user', userRouter)
 app.use('/login', loginRouter)
 app.use('/api-docs', swaggerUi.serve);
-app.get('/api-docs', swaggerUi.setup(swaggerDocument, options));
+app.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 module.exports = app;
