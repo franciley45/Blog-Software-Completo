@@ -18,13 +18,14 @@ const app = express();
 } */
 
 var options = {
-    customCssUrl: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css'
+    customCssUrl: 'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css'
   };
 app.use(express.json());
 app.use(cors()) // Use this after the variable declaration
 app.use('/post', milagresRouter)
 app.use('/user', userRouter)
 app.use('/login', loginRouter)
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
+app.use('/api-docs', swaggerUi.serve);
+app.get('/api-docs', swaggerUi.setup(swaggerDocument, options));
 
 module.exports = app;
