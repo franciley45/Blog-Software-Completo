@@ -6,6 +6,7 @@ const swaggerDocument = require('./swagger.json');
 const loginRouter = require('./routes/loginRoute');
 const milagresRouter = require('./routes/milagresRoute');
 const userRouter = require('./routes/userRoute');
+/* import "./style/style.swagger.css" */
 
 const app = express();
 
@@ -18,7 +19,7 @@ const app = express();
 } */
 
 var options = {
-    customCssUrl: 'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css'
+    customCssUrl: './style/style.swagger.css'
   };
 app.use(express.json());
 app.use(cors()) // Use this after the variable declaration
