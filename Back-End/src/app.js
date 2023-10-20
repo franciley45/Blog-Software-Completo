@@ -26,7 +26,7 @@ app.use(cors()) // Use this after the variable declaration
 app.use('/post', milagresRouter)
 app.use('/user', userRouter)
 app.use('/login', loginRouter)
-router.use('/api-docs', swaggerUi.serve);
-router.get('/api-docs', swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', swaggerUi.serve);
+app.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 module.exports = app;
