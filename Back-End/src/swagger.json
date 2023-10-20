@@ -12,6 +12,10 @@
 		{
 			"url": "https://blog-software-completo.vercel.app",
 			"description": "API de Produção"
+		},
+		{
+			"url": "http://localhost:3000",
+			"description": "API de loaclhost"
 		}
 	],
 	"paths": {
