@@ -31,8 +31,8 @@ const deletePost = async (id) => {
 
 const updatePost = async (title, date, milagres, id, user_id) => {
    const idFull = Number(id)
-  const convtDate = moment(date).format()
-
+   const convtDate = moment(date).format('YYYY-MM-DD HH:MM:SS')
+ 
   await (await connect()).query(
     'UPDATE posts set title = ?, user_id = ?, date = ?, milagres = ? WHERE posts_id = ?',
     [title, user_id, convtDate, milagres, id],

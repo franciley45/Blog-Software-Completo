@@ -12,13 +12,13 @@ const login = async (email, password) => {
 
   if (!email || !password)
     return {
-      status: 400, message: 'Todos os campos tem que esta preenchido'
+      status: 422, message: 'all fields must be filled in!'
     }
 
   const result = await loginModel.login(email)
   if (!result || result.password !== password)
     return {
-      status: 400, message: 'User não cadrastrado ou password errado'
+      status: 400, message: 'User not registered or wrong password!'
     }
 
   const { user_id, name } = result

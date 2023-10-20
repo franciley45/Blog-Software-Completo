@@ -5,9 +5,9 @@ const checkUserId =  async (req, res, next) => {
     const { user_id } = req.user.data;
     const checkID = await milagresModel.getAllByID(id)
 
-  if (!checkID) return res.status(404).json({ message: 'Post não encontrado' })
+  if (!checkID) return res.status(404).json({ message: 'Post not found!' })
   
-  if (checkID.user_id !== user_id) return res.status(400).json({ message: 'esse post não é seu' })
+  if (checkID.user_id !== user_id) return res.status(402).json({ message: 'this post is not yours!' })
   next()
 }
 

@@ -8,8 +8,14 @@ const validateJWT = (req, res, next) => {
     const err = { statusCode: 401, message: 'Token not found' };
     return res.status(err.statusCode).json(err.message)
   }
+  
+  console.log(token)
+  console.log("oiii",token.indexOf("Bearer"));
+  const tokenSlice = token.slice(7);
+/*   console.log(tokenSlice) */
+ 
   try {
-    const result = jwt.verify(token, secret);
+    const result = jwt.verify(tokenSlice, secret);
     req.user = result
     next();
   } catch (e) {

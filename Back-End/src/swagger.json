@@ -1,0 +1,461 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "API-BLOG.",
+		"description": "Essa API tem como objetivo todas as funcionalidades de um blog, incluindo login de usuário, cadastro de usuário e criação de post, com o CRUD completas. Repositório [https://github.com/franciley45/Blog-Software-Completo](https://github.com/franciley45/Blog-Software-Completo)",
+		"contact": {
+			"email": "testepa45@gmail.com"
+		},
+		"version": "1.0.0"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:3000",
+			"description": "API de localhost"
+		},
+		{
+			"url": "http://localhost:3002",
+			"description": "API de Produção"
+		}
+	],
+	"paths": {
+		"/login": {
+			"post": {
+				"summary": "Login de Usuário",
+				"description": "Essa rota será responsável por Login do usuário",
+				"tags": [
+					"Login"
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/login"
+							},
+							"examples": {
+								"user": {
+									"value": {
+										"email": "user1@gmail.com",
+										"password": "123"
+									}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"422": {
+						"description": "all fields must be filled in!"
+					},
+					"409": {
+						"description": "User already registered!"
+					},
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/user_return_post"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user": {
+			"post": {
+				"summary": "Cadastro de Usuário",
+				"description": "Essa rota será responsável por cadastrar um novo usuário",
+				"tags": [
+					"User"
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/user"
+							},
+							"examples": {
+								"user": {
+									"value": {
+										"name": "franciley rodrigues",
+										"email": "test@gmail.com",
+										"password": "123"
+									}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"422": {
+						"description": "all fields must be filled in!"
+					},
+					"409": {
+						"description": "User already registered!"
+					},
+					"201": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/user_return_post"
+								}
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"summary": "Busca todos os usuários.",
+				"description": "Essa rota será responsável por busca todos os usuários.",
+				"tags": [
+					"User"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/user"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user/{id}": {
+			"get": {
+				"summary": "Busca Usuário por Id",
+				"description": "Essa rota será responsável por Busca Usuário por Id",
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Id do Usuário para busca",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"404": {
+						"description": "User not registered!"
+					},
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/user"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/post": {
+			"get": {
+				"summary": "Busca todos os Posts.",
+				"description": "Essa rota será responsável por busca todos os Posts",
+				"tags": [
+					"Post"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/post_milagre"
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"summary": "Cria um novo Post ",
+				"description": "Essa rota será responsável por Cria um novo.",
+				"tags": [
+					"Post"
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/post_milagre"
+							},
+							"examples": {
+								"Post": {
+									"value": {
+										"title": "A salvação esta em Jesus Cristo ",
+										"date": "2023-09-21T09:02:55.000Z",
+										"milagres": "salvação é perdão"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/post_milagre"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Expired or invalid token!"
+					},
+					"400": {
+						"description": "Token not found!"
+					},
+					"404": {
+						"description": "Post not found!"
+					},
+					"402": {
+						"description": "this post is not yours!"
+					}
+				}
+			}
+		},
+		"/post/{id}": {
+			"get": {
+				"summary": "Busca Post por Id",
+				"description": "Essa rota será responsável por Busca Post por Id",
+				"tags": [
+					"Post"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Id do Post para busca",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"404": {
+						"description": "Post not registered!"
+					},
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/post_milagre"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"summary": "Deleta Post por Id",
+				"description": "Essa rota será responsável por Deleta Post por Id.",
+				"tags": [
+					"Post"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Id do Post para busca",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Expired or invalid token!"
+					},
+					"400": {
+						"description": "Token not found!"
+					},
+					"404": {
+						"description": "Post not found!"
+					},
+					"402": {
+						"description": "this post is not yours!"
+					}
+				}
+			},
+			"put": {
+				"summary": "Atualizar Post por Id",
+				"description": "Essa rota será responsável por Atualizar Post por Id.",
+				"tags": [
+					"Post"
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/post_milagre"
+							},
+							"examples": {
+								"Post": {
+									"value": {
+										"title": "deus seja louvado por toda minha vida",
+										"date": "2023-09-21T09:02:55.000Z",
+										"milagres": "salvação é perdão"
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Id do Post para busca",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/post_milagre"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Expired or invalid token!"
+					},
+					"400": {
+						"description": "Token not found!"
+					},
+					"404": {
+						"description": "Post not found!"
+					},
+					"402": {
+						"description": "this post is not yours!"
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"user": {
+				"type": "object",
+				"properties": {
+					"user_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				}
+			},
+			"user_return_post": {
+				"type": "object",
+				"properties": {
+					"user_id": {
+						"type": "number"
+					},
+					"name": {
+						"type": "string"
+					},
+					"token": {
+						"type": "string"
+					}
+				}
+			},
+			"login": {
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				}
+			},
+			"post_milagre": {
+				"type": "object",
+				"properties": {
+					"posts_id": {
+						"type": "number"
+					},
+					"title": {
+						"type": "string"
+					},
+					"user_id": {
+						"type": "number"
+					},
+					"date": {
+						"type": "string"
+					},
+					"milagres": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"scheme": "bearer",
+				"bearerFormat": "JWT"
+			}
+		}
+	}
+}

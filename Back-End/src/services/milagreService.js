@@ -10,7 +10,7 @@ const getAll = async () => {
 const getAllByID = async (id) => {
   const result = await milagresModel.getAllByID(id)
 
-  if (!result) return { status: 404, message: 'Post não encontrado' }
+  if (!result) return { status: 404, message: 'Post not registered!' }
   return { status: null, message: result }
 }
 
