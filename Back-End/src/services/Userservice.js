@@ -16,7 +16,7 @@ const getUserAll = async () => {
 const getUserId = async (id) => {
   const result = await userModel.getUserId(id)
   
-  if (!result) return { status: 404, message: 'User não encontrado' }
+  if (!result) return { status: 404, message: 'User not registered!' }
   return { status: null, message:result }
 }
 
@@ -24,14 +24,14 @@ const createUser = async (name, email, password) => {
   
   const user = await userModel.getUserByEmail(email)
 
-  if (user) return { status: 409, message: 'User already registered' };
+  if (user) return { status: 409, message: 'User already registered!' };
 
    const result = await userModel.createUser(name, email, password )
 
   const payload = { data: { email, user_id: result, name }};
   const token = jwt.sign(payload, secret, jwtConfig);
 
-return { status: null, message: { name, user_id: result, token }};
+return { status: null, message: { user_id: result, name, token }};
 };
 
 module.exports = {
