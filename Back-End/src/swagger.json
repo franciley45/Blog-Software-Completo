@@ -231,12 +231,6 @@
 					},
 					"400": {
 						"description": "Token not found!"
-					},
-					"404": {
-						"description": "Post not found!"
-					},
-					"402": {
-						"description": "this post is not yours!"
 					}
 				}
 			}
