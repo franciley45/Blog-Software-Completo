@@ -1,25 +1,32 @@
-const cors = require('cors')
+
 const express = require('express');
+const cors = require('cors')
+
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+const swaggerDocument = require('../swagger.json');
 
 const loginRouter = require('./routes/loginRoute');
 const milagresRouter = require('./routes/milagresRoute');
 const userRouter = require('./routes/userRoute');
 
-const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css';
+/* const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css';
 
 const options = {
 customCssUrl: CSS_URL,
 };
-
+ */
 const app = express();
+const router = express.Router();
+router.use('/api-docs', swaggerUi.serve);
+router.get('/api-docs', swaggerUi.setup(swaggerDocument));
+
 app.use(express.json());
 app.use(cors()) // Use this after the variable declaration
 app.use('/post', milagresRouter)
 app.use('/user', userRouter)
 app.use('/login', loginRouter)
-app.use('/api-docs', swaggerUi.serveFiles(swaggerDocument, options), swaggerUi.setup(swaggerDocument, options));
+app.use('/', router)
+/* app.use('/api-docs', swaggerUi.serve(swaggerDocument, options), swaggerUi.setup(swaggerDocument, options)); */
 
 
 

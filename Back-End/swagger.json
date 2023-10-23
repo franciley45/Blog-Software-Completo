@@ -15,7 +15,7 @@
 		},
 		{
 			"url": "http://localhost:3000",
-			"description": "API de loaclhost"
+			"description": "API de localhost"
 		}
 	],
 	"paths": {
