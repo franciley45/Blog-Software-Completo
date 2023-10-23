@@ -10,9 +10,12 @@ const milagresRouter = require('./routes/milagresRoute');
 const userRouter = require('./routes/userRoute');
 
 const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css';
-
+const CSS_URL2 =  'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css';
 const options = {
-customCssUrl: CSS_URL,
+customCssUrl: [
+  CSS_URL,
+  CSS_URL2
+]
 };
 
 const app = express();
