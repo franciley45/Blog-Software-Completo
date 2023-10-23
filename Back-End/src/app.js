@@ -9,16 +9,16 @@ const loginRouter = require('./routes/loginRoute');
 const milagresRouter = require('./routes/milagresRoute');
 const userRouter = require('./routes/userRoute');
 
-/* const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css';
+const CSS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css';
 
 const options = {
 customCssUrl: CSS_URL,
 };
- */
+
 const app = express();
 const router = express.Router();
 router.use('/api-docs', swaggerUi.serve);
-router.get('/api-docs', swaggerUi.setup(swaggerDocument));
+router.get('/api-docs', swaggerUi.setup(swaggerDocument, options));
 
 app.use(express.json());
 app.use(cors()) // Use this after the variable declaration
