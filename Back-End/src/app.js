@@ -17,7 +17,7 @@ customCssUrl: CSS_URL,
 
 const app = express();
 const router = express.Router();
-router.use('/api-docs', swaggerUi.serve);
+router.use('/api-docs', swaggerUi.serveFiles(swaggerDocument, options));
 router.get('/api-docs', swaggerUi.setup(swaggerDocument, options));
 
 app.use(express.json());
