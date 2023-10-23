@@ -20,7 +20,7 @@ customCssUrl: [
 
 const app = express();
 const router = express.Router();
-router.use('/api-docs', swaggerUi.serveFiles(swaggerDocument, options));
+router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument, options));
 
 app.use(express.json());
