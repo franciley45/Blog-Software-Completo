@@ -10,10 +10,10 @@ const validateJWT = (req, res, next) => {
     return res.status(err.statusCode).json(err.message)
   }
   
-  const tokenSlice = token.slice(7);
+  /* const tokenSlice = token.slice(7); */
 
   try {
-    const result = jwt.verify(tokenSlice, secret);
+    const result = jwt.verify(token, secret);
     req.user = result
     next();
   } catch (e) {

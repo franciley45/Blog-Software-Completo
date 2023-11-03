@@ -4,6 +4,7 @@ const cors = require('cors')
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../swagger.json');
+ 
 
 const loginRouter = require('./routes/loginRoute');
 const milagresRouter = require('./routes/milagresRoute');
@@ -20,6 +21,7 @@ customCssUrl: [
 
 const app = express();
 const router = express.Router();
+
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument, options));
 
